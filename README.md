@@ -18,6 +18,9 @@ my-app/
     logo.svg
     server.js
 ```
+## Install
+In the project directory, run this command to install node_modules
+### `npm install`
 
 ## Available Scripts
 
