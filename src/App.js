@@ -58,7 +58,6 @@ class App extends Component {
   }
   render() {
     const { images, loading, isEnded } = this.props;
-    const loader = (<Dimmer active inverted><Loader inverted>Loading</Loader></Dimmer>);
     return (
       <div className="app">
         <Header as='h2' icon textAlign='center'>
@@ -68,7 +67,7 @@ class App extends Component {
           </Header.Content>
         </Header>
         <Container>
-              <InfiniteScroll loader={loader} className="ui five cards" items={this._renderImages()} elementIsScrollable={false} 
+              <InfiniteScroll className="ui five cards" items={this._renderImages()} elementIsScrollable={false} 
               loadingMore={loading} hasMore={!isEnded} loadMore={this._loadMore.bind(this)}/>
               {isEnded && <Message positive>
                 <Message.Header>All items are loaded. Copyright &copy; 2017. Nguyen Van Trung - trung.aptvn@gmail.com</Message.Header>
