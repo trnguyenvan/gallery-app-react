@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Icon, Image,  Card, Rating, Modal, Button, Message, Dimmer, Loader } from 'semantic-ui-react';
+import { Container, Header, Icon, Image,  Card, Rating, Modal, Button, Message } from 'semantic-ui-react';
 import InfiniteScroll from 'redux-infinite-scroll';
 import { fetchImages } from './actions/appActions';
 import './App.css';
@@ -38,7 +38,7 @@ class App extends Component {
         </Card.Content>
         <Card.Content extra>
           <Rating icon='heart' defaultRating={img.rating} maxRating={5} />
-          <Modal basic size='small' trigger={<Button basic color='green' size='mini' floated='right'>Detail</Button>} closeIcon='close'>
+          <Modal size='small' trigger={<Button basic color='green' size='mini' floated='right'>Detail</Button>} closeIcon='close'>
             <Modal.Header>
               {img.name}
             </Modal.Header>
